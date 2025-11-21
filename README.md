@@ -42,19 +42,37 @@ Hyperparameters were tuned through iterative experimentation with the goal of il
 
 ## Project Structure
 
-```bash
+```
+├── datasets/
+│   ├── imdb.csv
+│   ├── imdb_unsupervised.csv
+│   ├── imdb_unsupervised_clean.csv
+│   └── rt.csv
+│
+├── imdb_split/
+│   ├── imdb_train.csv
+│   └── imdb_test.csv
+│
+├── rt_split/
+│   ├── rt_train.csv
+│   └── rt_test.csv
+│
 ├── notebooks/
-│   ├── 00_Data_Preprocessing.ipynb        # Cleans, splits, and saves all datasets
-│   ├── 01_ML_Models.ipynb                 # TF-IDF, Logistic Regression, Linear SVM experiments
-│   ├── 02_Train_Word2Vec_Embeddings.ipynb # Training custom Word2Vec embeddings
-│   ├── 03_LSTM.ipynb                      # Bi-LSTM experiments with multiple embedding strategies
-│   └── 04_RoBERTa.ipynb                   # Fine-tuning the RoBERTa transformer model
+│   ├── 00_Preprocessing_and_EDA.ipynb       # Data cleaning, EDA, and train/test splits
+│   ├── 01_ML_Models.ipynb                   # TF-IDF, n-grams, Logistic Regression, Linear SVM
+│   ├── 02_Word2Vec_Train.ipynb              # Training custom Word2Vec embeddings
+│   ├── 03_LSTM.ipynb                        # Bi-LSTM experiments (random/GloVe/W2V embeddings)
+│   └── 04_Roberta.ipynb                     # Fine-tuning RoBERTa sentiment model
 │
 ├── src/
-│   ├── __init__.py                        # Marks 'src' as a Python package
-│   └── config.py                          # Central configuration (paths, seeds, constants)
+│   ├── __init__.py                          # Marks this directory as a Python package
+│   └── config.py                            # Centralized config: paths, seeds, constants
 │
-├── LICENSE                                 # MIT license
-├── README.md                               # Project documentation
-└── requirements.txt                        # Project dependencies
-
+├── w2v_model/
+│   ├── w2v_model                            # Trained gensim Word2Vec model
+│   ├── w2v_model.syn1neg.npy                # Negative sampling weights
+│   └── w2v_model.wv.vectors.npy             # Word vectors matrix
+│
+├── README.md                                # Project documentation
+├── requirements.txt                         # Python dependencies
+```
