@@ -1,4 +1,4 @@
-## Sentiment Analysis of Movie Reviews
+# Sentiment Analysis of Movie Reviews
 
 This project served as my introduction to practical NLP. I explored multiple approaches to sentiment analysis—starting with classic machine-learning baselines and progressing toward modern deep-learning and transformer models. The goal was to understand how different methods behave, what their strengths are, and how they compare across datasets.
 
@@ -39,3 +39,18 @@ All experiments use consistent train/validation/test splits.
 Randomness is fully controlled through a fixed seed.
 
 Hyperparameters were tuned through iterative experimentation with the goal of illustrating conceptual differences between approaches-rather than exhaustively optimizing each model.
+
+## Project Structure
+
+├── notebooks/
+│   ├── 00_Data_Preprocessing.ipynb          # Cleans, splits, and saves all datasets
+│   ├── 01_ML_Models.ipynb                   # Experiments with TF-IDF, SVM, Logistic Regression
+│   ├── 02_Train_Word2Vec_Embeddings.ipynb   # Script to train custom embeddings on the corpus
+│   ├── 03_Lstm.ipynb                        # All Bi-LSTM experiments with different embeddings
+│   └── 04_Roberta.ipynb                     # Fine-tuning the RoBERTa transformer model
+├── src/
+│   ├── __init__.py                          # Makes 'src' a Python package
+│   ├── config.py                            # Central configuration for all paths and constants
+├── LICENSE                                  # MIT License
+├── README.md                                # You are here!
+└── requirements.txt                         # Project dependencies for easy setup
