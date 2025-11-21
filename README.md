@@ -43,14 +43,16 @@ Hyperparameters were tuned through iterative experimentation with the goal of il
 ## Project Structure
 
 ├── notebooks/
-│   ├── 00_Data_Preprocessing.ipynb          # Cleans, splits, and saves all datasets
-│   ├── 01_ML_Models.ipynb                   # Experiments with TF-IDF, SVM, Logistic Regression
-│   ├── 02_Train_Word2Vec_Embeddings.ipynb   # Script to train custom embeddings on the corpus
-│   ├── 03_Lstm.ipynb                        # All Bi-LSTM experiments with different embeddings
-│   └── 04_Roberta.ipynb                     # Fine-tuning the RoBERTa transformer model
+│   ├── 00_Data_Preprocessing.ipynb        # Cleans, splits, and saves all datasets
+│   ├── 01_ML_Models.ipynb                 # TF-IDF, Logistic Regression, Linear SVM experiments
+│   ├── 02_Train_Word2Vec_Embeddings.ipynb # Training custom Word2Vec embeddings
+│   ├── 03_LSTM.ipynb                      # Bi-LSTM experiments with multiple embedding strategies
+│   └── 04_RoBERTa.ipynb                   # Fine-tuning the RoBERTa transformer model
+│
 ├── src/
-│   ├── __init__.py                          # Makes 'src' a Python package
-│   ├── config.py                            # Central configuration for all paths and constants
-├── LICENSE                                  # MIT License
-├── README.md                                # You are here!
-└── requirements.txt                         # Project dependencies for easy setup
+│   ├── __init__.py                        # Marks 'src' as a Python package
+│   └── config.py                          # Central configuration (paths, seeds, constants)
+│
+├── LICENSE                                # MIT license
+├── README.md                              # Project documentation
+└── requirements.txt                       # Project dependencies
