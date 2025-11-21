@@ -42,6 +42,7 @@ Hyperparameters were tuned through iterative experimentation with the goal of il
 
 ## Project Structure
 
+```bash
 ├── notebooks/
 │   ├── 00_Data_Preprocessing.ipynb        # Cleans, splits, and saves all datasets
 │   ├── 01_ML_Models.ipynb                 # TF-IDF, Logistic Regression, Linear SVM experiments
@@ -53,6 +54,7 @@ Hyperparameters were tuned through iterative experimentation with the goal of il
 │   ├── __init__.py                        # Marks 'src' as a Python package
 │   └── config.py                          # Central configuration (paths, seeds, constants)
 │
-├── LICENSE                                # MIT license
-├── README.md                              # Project documentation
-└── requirements.txt                       # Project dependencies
+├── LICENSE                                 # MIT license
+├── README.md                               # Project documentation
+└── requirements.txt                        # Project dependencies
+
